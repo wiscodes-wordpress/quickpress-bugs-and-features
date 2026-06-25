@@ -1,0 +1,77 @@
+name: Bug report
+description: Structured QuickPress bug report (matches relay intake sections).
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    value: |
+      Use this template for manual reports. Automated intake from licensed sites uses the same section names.
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Report section
+      placeholder: "1. Go to …\n2. Click …\n3. See error"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      required: false
+
+  - type: markdown
+    value: |
+      ## Environment
+      _Relay fills these for automated intake. Include manually if helpful._
+
+  - type: input
+    id: site_url
+    attributes:
+      label: Site URL
+      required: false
+
+  - type: input
+    id: wp_version
+    attributes:
+      label: WordPress version
+      required: false
+
+  - type: markdown
+    value: |
+      ## QuickPress
+      Do **not** paste license keys or API secrets.
+
+  - type: input
+    id: quickpress_version
+    attributes:
+      label: QuickPress version
+      required: false
+
+  - type: dropdown
+    id: license_status
+    attributes:
+      label: License status
+      options:
+        - active
+        - inactive
+        - unknown
+    validations:
+      required: false
